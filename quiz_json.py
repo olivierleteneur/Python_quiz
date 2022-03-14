@@ -17,9 +17,6 @@ if answer.lower()=='yes':
 
     with open('questionsAnswers.json', "r") as json_file:
         data = json.load(json_file)
-        occurrences = data.count("question")
-        print(occurrences)
-        # c = Counter(item['question'] for item in data)
         for p in data['questionsAnswers']:
             answer=input('\n '+ p['question'])
             if answer.lower()==p['answer']:
@@ -39,3 +36,4 @@ else:
 
 ### Improvments :
 # encrypt answer and decrypt in use : tried but not easy at seems
+# add counter for number of occurrences in json file
